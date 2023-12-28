@@ -63,7 +63,8 @@ module.exports = {
       "@layout": path.resolve(__dirname, "src/layout/"),
       "@api": path.resolve(__dirname, "src/api/"),
       "@utils": path.resolve(__dirname, "src/utils/"),
-      "@contexts": path.resolve(__dirname, "src/contexts/")
+      "@contexts": path.resolve(__dirname, "src/contexts/"),
+      "@styles": path.resolve(__dirname, "src/styles/"),
     }
   },
   plugins: [

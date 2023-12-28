@@ -25,7 +25,8 @@
       "@api/*": ["api/*"],
       "@utils/*": ["utils/*"],
       "@contexts/*": ["contexts/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["src"],
