@@ -1,20 +1,25 @@
-import React, { lazy } from "react"
-import { useLocation } from "react-router-dom"
-import { URL } from "@config/Constants"
+import React, { lazy, Suspense } from 'react';
+import { useLocation } from 'react-router-dom';
+import { URL } from '@config/Constants';
 
-const NavBar = lazy(() => import("@components/NavBar"))
-const Footer = lazy(() => import("@components/Footer"))
+const NavBar = lazy(() => import('@components/NavBar'));
 
 const PageLayout = ({ children }) => {
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
+  
 
   return (
     <>
-      {![URL.SIGN_IN, URL.SIGN_UP, URL.FORGOT_PASSWORD, URL.RESET_PASSWORD].includes(pathname) && <NavBar />}
-      {children}
-      <Footer />
+      {![URL.SIGN_IN, URL.SIGN_UP, URL.FORGOT_PASSWORD, URL.RESET_PASSWORD].includes(pathname) && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <NavBar />
+        </Suspense>
+      )}
+      <main className="container mx-auto px-4 py-6">
+        {children}
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default PageLayout
+export default PageLayout;
