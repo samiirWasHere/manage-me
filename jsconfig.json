@@ -26,7 +26,8 @@
       "@utils/*": ["utils/*"],
       "@contexts/*": ["contexts/*"],
       "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@store/*": ["store/*"]
     }
   },
   "include": ["src"],

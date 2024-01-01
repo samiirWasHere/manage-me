@@ -7,7 +7,8 @@ import PublicRoute from './Public/index';
 import PrivateRoute from './Private/index';
 import ParamRestrictedRoute from './ParamRestricted';
 
-import LandingPage from '@pages/LandingPage';
+import Login from '@pages/Login';
+import SignUp from '@pages/SignUp';
 
 import { ToastContainer } from 'react-toastify';
 
@@ -20,8 +21,8 @@ const MainRouter = () => {
       <ToastContainer />
         <ScrollToTop />
         <Routes>
-          <Route path={URL.HOME} element={<LandingPage />} />
-
+          <Route path={URL.HOME} element={<Login />} />
+          <Route path={URL.SIGN_UP} element={<SignUp />} />
           {/* <Route path={URL.SIGN_UP} element={<PublicRoute element={<SignUp />} />} />
           <Route path={URL.SIGN_IN} element={<PublicRoute element={<SignIn />} />} />
           <Route

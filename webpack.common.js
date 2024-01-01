@@ -6,7 +6,6 @@ const webpack = require("webpack");
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 
-
 module.exports = {
   entry: "./src/index.js", 
   output: {
@@ -65,6 +64,7 @@ module.exports = {
       "@utils": path.resolve(__dirname, "src/utils/"),
       "@contexts": path.resolve(__dirname, "src/contexts/"),
       "@styles": path.resolve(__dirname, "src/styles/"),
+      "@store": path.resolve(__dirname, "src/store/")
     }
   },
   plugins: [

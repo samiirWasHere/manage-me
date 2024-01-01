@@ -14,3 +14,11 @@ html {
 @tailwind components;
 @tailwind utilities;
 
+.noArrowInputField::-webkit-inner-spin-button,
+.noArrowInputField::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.noArrowInputField {
+    -moz-appearance: textfield;
+}
